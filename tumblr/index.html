@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+    
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>{Title}</title>
+      <meta name="description" content="{MetaDescription}">
+      <link rel="shortcut icon" href="{Favicon}">
+      <script src="http://static.tumblr.com/yxhengu/qn3n8ddjb/modernizr-2.6.2.min.js"></script>
+      <link href='http://static.tumblr.com/yxhengu/2Ign8egxd/normalize.css' rel='stylesheet' type='text/css'>
+       <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+       <meta name="text:Tagline" content=""/>
+  </head>
+  <body>
+
+<style type="text/css">
+
+        /*Cores
+
+        Verde   :#45cbbd;
+        Violeta :#761acb;
+        Texto   :#424e59;
+        Cinza   :#BBBBBB;
+
+        */
+
+        html,
+        button,
+        input,
+        select,
+        textarea {
+            color: #424e59;
+            font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            font-size: 62.5%;
+            line-height: 1.4;  
+        }
+
+        hr {
+            display: block;
+            height: 1px;
+            border: 0;
+            border-top: 1px solid #ccc;
+            margin: 1em 0;
+            padding: 0;
+        }
+
+
+        img {
+            vertical-align: middle;
+        }
+
+
+        fieldset {
+            border: 0;
+            margin: 0;
+            padding: 0;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+
+        h1 {
+            font-size: 3.6em;
+            color: #FFF;
+            font-weight: 300;
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 2.4em;
+            color: #424e59;
+            font-weight: 300;
+        }
+
+        p {
+            font-size: 1.6em;
+            color: #424e59;
+            font-weight: 400;
+        }
+
+        a {
+            color: #761acb;
+        }
+
+        a:hover {
+            color: #45cbbd;
+        }
+
+        b, strong {
+            font-weight: 700;
+        }
+
+
+        .wrap {
+            margin: 0 auto;
+            width: 940px;
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+
+        .wrap:after {
+             clear: both;
+        }
+
+        .header {
+            width: 100%;
+            height: 528px;
+            background: url('http://static.tumblr.com/yxhengu/Ezbn8cytt/header.jpg') no-repeat fixed #000; 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            position: relative;
+        }
+            
+            .header h1 {
+                padding-top: 4em;
+                margin-bottom: 0;
+                color: #FFF;
+            }
+            
+            .header h1 a {
+                color:#FFF;
+                text-decoration:none;
+                 color: #FFF;
+            }
+            
+            .header h1 a:hover {
+                text-decoration:none;
+            }
+
+            .header h2 {
+                color: #fff;
+                font-size: 1.8em;
+                font-weight: 300;
+            }
+            
+            .usuario {
+                background: rgba(0, 0, 0, 0.2);
+                padding: 2em 0 3em 0;
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+            }
+
+            .usuario h3 {
+                color: #fff;
+                font-size: 2.4em;
+                margin-bottom: 0.2em;
+                padding-top: 1.5em;
+                display: block;
+                font-weight: 300;
+            }
+
+            .usuario p {
+                color: #fff;
+                margin-top: 0;
+                font-size: 1.4em;
+            }
+
+            .avatar {
+                float: left;
+                margin-right: 3em;
+            }
+
+            .avatar img {
+                -webkit-border-radius: 100%;
+                -moz-border-radius: 100%;
+                border-radius: 100%;
+            }
+
+        .post {
+            margin: 6em 0 6em 0;
+            position: relative;
+        }
+        
+        .post h2 a {
+            color:#424e59;
+            text-decoration: none;
+        }
+        
+        .post ul {
+            font-size: 1.6em;
+        }
+        
+        .post .imagem {
+            -webkit-box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.2);
+            -moz-box-shadow:    1px 1px 1px 0px rgba(0, 0, 0, 0.2);
+            box-shadow:         1px 1px 1px 0px rgba(0, 0, 0, 0.2);
+            border: none;
+            width:100%;
+        }
+        
+        .post .imagem img {
+            max-width:100%;
+        }
+        
+        .post.texto blockquote {
+            background:none;
+            font-size:1.6em;
+            border-left: 4px solid #45cbbd;
+            margin: 0;
+            padding: 0;
+            padding-left: 1.5em;
+        }
+        
+        .post.texto blockquote p {
+            font-size:1em;
+            padding-top:1em;
+            padding-bottom:1em;
+            color:#999;
+        }
+        
+        .post.chat ul {
+            list-style:none;
+            padding:0;
+        }
+        
+        .voz {
+            font-weight:700;
+            display:block;
+            float:left;
+            width:120px;
+        }
+
+        .post:before,
+        .post:after {
+            content: " "; 
+            display: table; 
+        }
+
+        .post:after {
+           clear: both;
+        }
+
+        .footer-post {
+            border-top: 1px solid #ddd;
+        }
+
+        .footer-post ul {
+            list-style: none;
+            padding: 0;
+            font-size: 1.4em;
+        }
+
+        .footer-post li {
+            float: left;
+            margin-right: 2em;
+        }
+        
+         .footer-post li.gostar, 
+         .footer-post li.reblogar {
+            float:right;
+        }
+        
+        .footer-post span {
+            color:#bbb;
+        }
+
+
+        .post.citacao blockquote {
+            margin: 0;
+            background: url(http://static.tumblr.com/yxhengu/aBEn8cyws/quote.png) top left no-repeat #FFF; 
+            padding-top: 4em;
+        }
+
+        .link {
+            background: url(http://static.tumblr.com/yxhengu/EZZn8cyvm/link.png) top left no-repeat #FFF; 
+            padding-top: 4em;
+        }
+        
+        .post.link h2 a {
+            color:#6620c6;
+            text-decoration:underline;
+        }
+        
+        span.data a {
+            text-decoration: none;
+            color: #bbb;
+        }
+
+        .footer {
+            background: #761acb;
+            text-align: center;
+            padding: 2em 0 2em 0;
+            width: 100%;
+            color: #fff;
+            margin-top: 6em;
+        }
+
+        .footer small {
+            font-size: 1.2em;
+        }
+
+        .footer small a {
+            text-decoration: underline;
+            color: #fff;
+        }
+        
+        ul.notas  {
+            margin:0;
+            padding:0;
+            font-size:1.4em !important;
+        }
+        
+        ul.notas li {
+            list-style:none;
+            margin-bottom:2em;
+        }
+        
+        ul.notas img {
+            margin-right:0.2em;
+        }
+
+        .clearfix:before,
+        .clearfix:after {
+            content: " "; 
+            display: table; 
+        }
+
+        .clearfix:after {
+            clear: both;
+        }
+
+        .clearfix {
+            *zoom: 1;
+        }
+</style>
+
+  <header class="header">
+
+    <div class="wrap">
+      <h1><a href="{BlogURL}">{Title}</a></h1>
+      {block:Description}
+            <h2>{Description}</h2>
+      {/block:Description}
+    </div>
+
+      <div class="usuario">
+        <div class="wrap">
+          <figure class="avatar"><img src="{PortraitURL-128}"></figure>  
+          <h3>{name}</h3>
+          {block:IfTagline}
+           <p>{text:Tagline}</p>
+          {/block:IfTagline}
+        
+        </div>
+      </div>
+
+  </header>
+
+  <section class="principal">
+    <div class="wrap">
+    
+    {block:Posts}
+    
+    {block:Text}
+    <article class="post texto">
+       {block:title}
+        <h2>
+          <a href="{Permalink}">{Title}</a>
+        </h2>
+     {/block:title}
+       {body}
+        <footer class="footer-post">
+        <ul>
+           {block:HasTags}
+           {block:Tags}
+            <li><a href="{TagURL}">#{Tag}</a></li>
+           {/block:Tags}
+           {/block:HasTags}
+           <li><span class="data">{block:Date}<a href="{Permalink}">{TimeAgo}</a>{block:Date}</span></li>
+            <li><span>{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount} </span></li>
+          <li class="gostar">{LikeButton}</li>
+          <li class="reblogar">{ReblogButton}</li>
+        </ul>
+      </footer>
+    </article>
+    
+    <ul class="notas">
+    {block:PostNotes}
+        <li>{PostNotes-64}{PostNotes}</li>
+    {/block:PostNotes}
+    </ul>
+    {/block:Text}
+    
+    
+    {block:Photo}
+     <article class="post foto">
+      <figure class="imagem"><img src="{PhotoURL-1280}" alt="{PhotoAlt}"></figure>
+      {block:Caption}{Caption}{/block:Caption}
+         <footer class="footer-post">
+        <ul>
+           {block:HasTags}
+           {block:Tags}
+            <li><a href="{TagURL}">#{Tag}</a></li>
+           {/block:Tags}
+           {/block:HasTags}
+             <li><span class="data">{block:Date}<a href="{Permalink}">{TimeAgo}</a>{block:Date}</span></li>
+            <li><span>{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount} </span></li>
+          <li class="gostar">{LikeButton}</li>
+          <li class="reblogar">{ReblogButton}</li>
+        </ul>
+      </footer>
+      </article>
+      
+      <ul class="notas">
+    {block:PostNotes}
+        <li>{PostNotes-64}{PostNotes}</li>
+    {/block:PostNotes}
+    </ul>
+      {/block:Photo}
+    
+    
+    
+    {block:Quote}
+    <article class="post citacao">
+      
+      <blockquote>
+          <p>{Quote}</p>
+          <p>— {block:source}{Source}{/block:source}</p>
+      </blockquote>
+      
+        <footer class="footer-post">
+        <ul>
+           {block:HasTags}
+           {block:Tags}
+            <li><a href="{TagURL}">#{Tag}</a></li>
+           {/block:Tags}
+           {/block:HasTags}
+             <li><span class="data">{block:Date}<a href="{Permalink}">{TimeAgo}</a>{block:Date}</span></li>
+            <li><span>{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount} </span></li>
+          <li class="gostar">{LikeButton}</li>
+          <li class="reblogar">{ReblogButton}</li>
+        </ul>
+      </footer>
+    </article>
+    
+     <ul class="notas">
+    {block:PostNotes}
+        <li>{PostNotes-64}{PostNotes}</li>
+    {/block:PostNotes}
+    </ul>
+    {/block:Quote}
+    
+    {block:Link}
+    <article class="post link">
+      <h2><a href="{URL}" {Target}>{Name}</a></h2>
+      <p>{block:description}{Description}{/block:description}</p>
+     <footer class="footer-post">
+        <ul>
+           {block:HasTags}
+           {block:Tags}
+            <li><a href="{TagURL}">#{Tag}</a></li>
+           {/block:Tags}
+           {/block:HasTags}
+             <li><span class="data">{block:Date}<a href="{Permalink}">{TimeAgo}</a>{block:Date}</span></li>
+            <li><span>{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount} </span></li>
+          <li class="gostar">{LikeButton}</li>
+          <li class="reblogar">{ReblogButton}</li>
+        </ul>
+      </footer>
+    </article>
+    
+     <ul class="notas">
+    {block:PostNotes}
+        <li>{PostNotes-64}{PostNotes}</li>
+    {/block:PostNotes}
+    </ul>
+    {/block:Link}
+    
+   {block:Chat}
+    <article class="post chat">
+        {block:Title}
+            <h2><a href="{Permalink}">{Title}</a></h2>
+        {/block:Title}
+        <ul>
+            {block:Lines}
+                <li class="{Alt} user_{UserNumber}">
+                    {block:Label}
+                        <span class="voz">{Label}</span>
+                    {/block:Label}{Line}
+                </li>
+            {/block:Lines}
+        </ul>
+        
+      <footer class="footer-post">
+        <ul>
+           {block:HasTags}
+           {block:Tags}
+            <li><a href="{TagURL}">#{Tag}</a></li>
+           {/block:Tags}
+           {/block:HasTags}
+             <li><span class="data">{block:Date}<a href="{Permalink}">{TimeAgo}</a>{block:Date}</span></li>
+            <li><span>{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount} </span></li>
+          <li class="gostar">{LikeButton}</li>
+          <li class="reblogar">{ReblogButton}</li>
+        </ul>
+      </footer>
+    </article>
+    
+     <ul class="notas">
+    {block:PostNotes}
+        <li>{PostNotes-64}{PostNotes}</li>
+    {/block:PostNotes}
+    </ul>
+    {/block:Chat}
+
+    
+    {/block:Posts}
+    
+   {block:Pagination}
+    {block:PreviousPage}
+      <a href="{PreviousPage}">Página Anterior</a>
+    {/block:PreviousPage}
+    {block:NextPage}
+       <a href="{NextPage}">Próxima Página</a>
+    {/block:NextPage}
+  {/block:Pagination}                 
+    </div>
+  </section>
+  
+  <footer class="footer">
+    <div class="wrap">
+      <small>Design &amp; Desenvolvimento <a href="http://www.popupdesign.com.br">Dani Guerrato</a></small>
+    </div>
+  </footer>
+
+
+  <!-- JS  -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="http://static.tumblr.com/yxhengu/x8hn8ddju/jquery-1.9.1.min.js"><\/script>')</script>
+  </body>
+</html>
